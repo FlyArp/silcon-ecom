@@ -1,0 +1,246 @@
+*,
+*::after,
+*::before {box-sizing: border-box;}
+
+body { 
+	margin: 0; 
+	font-family: Roboto,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 { margin: 0; }
+
+a {	text-decoration: none; color: black;}
+
+.container {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+/* Header */
+
+.top-header {
+	background-color: #fef7f6;
+}
+
+.top-header__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.top-header__text {
+	font-size: 11px;
+	font-weight: 300;
+	padding: 0 15px;
+	margin: 10px 0;
+	display: inline-block;
+}
+.top-header__text:first-child {
+	padding-left: 0;
+}
+.top-header__text:last-child {
+	padding-right: 0;
+}
+.top-header__text + .top-header__text {
+	border-left: 1px solid #bab7b6;
+}
+
+.header__bg { background-color: white; }
+
+.header__content {
+	display: flex;
+	justify-content: space-between;
+	padding: 25px 0;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+}
+
+.navigation__item {
+	font-weight: 500;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.navigation__item + .navigation__item {padding-left: 40px;}
+
+
+.header__icon + .header__icon {margin-left: 30px;}
+
+/* Banner */
+.banner {
+	background: url('../img/bg-1.jpg');
+	background-size: cover;
+	max-height: 790px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.banner__wrap {
+	float: right;
+}
+.banner_grey {
+	background: url('../img/bg-2.png');
+}
+
+.banner__suptitle {
+	font-weight: 500;
+	font-size: 14px;
+	color: #565656;
+	text-transform: uppercase;
+}
+.banner__title {
+	font-weight: 500;
+	font-size: 60px;
+	margin: 40px auto 60px;
+	max-width: 480px;
+}
+
+.banner__title_cursive {
+	font-family: "Dancing Script" , cursive;
+	font-weight: 700;
+	font-size: 58px;
+	color: #2a2a2a;
+	text-transform: uppercase;
+}
+
+.banner__subtitle {
+	font-size: 24px;
+	font-weight: 300;
+	color: #4a4a4a;
+	text-transform: uppercase;
+	margin-bottom: 60px;
+}
+
+.banner__item {
+	text-align: center;
+	width: 50%;
+
+}
+.banner__img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+/* Shop now */
+.shop-now {
+	background-color: #ff5353;
+	color: #fff;
+	font-weight: 500;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 20px 45px;
+	border-radius: 5px;
+}
+
+
+/* Section */
+.section {
+	padding: 150px 0;
+}
+.section__title {
+	font-weight: 700;
+	font-size: 36px;
+	text-align: center;
+	margin: 0 auto 90px;
+	text-transform: uppercase;
+}
+
+
+/* product */
+.product {
+	display: flex;
+}
+
+.product__item{
+	flex: 1 1 0;
+}
+
+.product__item + .products__item {
+	margin-left: 30px;
+}
+
+.product__img {
+	position: relative;
+	display: inline-block;
+}
+
+
+.product__img:hover .product__popup {
+	opacity: 1;
+	transform: translate3d(0, -15px, 0);
+}
+
+.product__popup {
+	opacity: 0;
+	position: absolute;
+	width: 180px;
+	left: 50%;
+	margin-left: -90px;
+	bottom: 45px;
+	transition: all .2s linear;
+	display: flex;
+	justify-content: space-between;
+}
+.product__icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+	transition: all .2s linear;
+}
+
+
+.product__icon:hover {
+	background-color: #ff5353;
+	color: #fff;
+}
+.product__icon i {
+	line-height: 50px;
+}
+
+
+.product__name {
+	color: #888888;
+	font-size: 14px;
+	text-align: center;
+	margin: 30px 0 15px;
+}
+.product__rate {
+	text-align: center;
+	margin: 15px 0;
+}
+
+.product__price {
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* Carousel */
+
+.carousel-indicators {
+	display: flex;
+	justify-content: center;
+	margin-top: 70px;
+}
+
+.carousel-indicators__item {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #c6b5a1;
+}
+
+.carousel-indicators__item + .carousel-indicators__item {
+	margin-left: 15px;
+}
+
+ .carousel-indicators__item.active {
+	background-color: #ff5353;
+}
