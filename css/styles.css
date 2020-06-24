@@ -77,6 +77,7 @@ a {	text-decoration: none; color: black;}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 150px;
 }
 .banner__wrap {
 	float: right;
@@ -140,7 +141,7 @@ a {	text-decoration: none; color: black;}
 
 /* Section */
 .section {
-	padding: 150px 0;
+	padding-bottom: 150px;
 }
 .section__title {
 	font-weight: 700;
@@ -154,6 +155,10 @@ a {	text-decoration: none; color: black;}
 /* product */
 .product {
 	display: flex;
+}
+
+.product + .product {
+	margin-top: 80px;
 }
 
 .product__item{
@@ -243,4 +248,192 @@ a {	text-decoration: none; color: black;}
 
  .carousel-indicators__item.active {
 	background-color: #ff5353;
+}
+
+
+/* Advantages */
+
+.advantages {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 150px;
+	/* align-items: center; */
+}
+
+.advantages__item {
+	border: 1px solid #ebeef0;
+	text-align: center;
+	padding: 30px 0;
+	flex: 1 1 0;
+
+}
+
+.advantages__item + .advantages__item {
+	margin-left: 30px;
+}
+
+.advantages__icon {
+	margin-bottom: 30px;
+	height: 40px;
+}
+
+.advantages__title {
+	font-weight: 500;
+	font-size: 15px;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+}
+
+.advantages__subtitle {
+	font-size: 14px;
+	color: #888888;
+}
+
+
+/* Journal */
+
+.journal {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.journal__item {
+	width: 31.57%;
+}
+
+
+.journal__date {
+	font-size: 13px;
+	color: #888888;
+	margin: 35px 0 20px;
+}
+
+.journal__date::before {
+	content: '';
+	width: 12px;
+	height: 6px;
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #ff5353;
+}
+
+.journal__title {
+	font-size: 20px;
+	font-weight: 700;
+	border-bottom: 1px solid #e1e1e1;
+	line-height: 30px;
+	padding-bottom: 30px;
+}
+
+.journal__footer {
+	font-size: 14px;
+	color:#888888 ;
+	margin-top: 25px;
+}
+
+.journal__theme, .journal__comments {
+	margin-left: 10px;
+}
+
+.journal__theme {
+	margin-right: 30px;
+}
+.journal__footer * {
+ 	vertical-align: middle;
+ }
+
+ /* Instagram */
+
+.instagram {
+ 	display: flex;
+ 	justify-content: space-between;
+ }
+
+.instagram__item {
+ 	width: 22.98%;
+ 	position: relative;
+ }
+
+.instagram__item:hover .instagram__bg {
+	height: 100%;
+	opacity: 1;
+} 
+
+.instagram__item:hover .instagram__icon {
+	opacity: 1;
+}
+
+.instagram__img {
+ 	display: block;
+ }
+
+.instagram__bg {
+	position: absolute;
+	background-color: #e16868;
+	bottom: 0;
+	width: 100%;
+	height: 80%;
+	opacity: 0;
+
+	transition: all .2s linear;
+}	
+
+.instagram__icon {
+ 	position: absolute;
+ 	width: 100%;
+ 	top: 50%;
+ 	font-size: 40px;
+ 	transform: translate3d(0, -50%, 0);
+ 	color: #fff;
+ 	text-align: center;
+ 	opacity: 0;
+
+ 	transition: opacity .2s linear;
+ }
+
+ /* Footer */
+
+ .footer {
+ 	background-color: #e9e1d8;
+ }
+
+
+/* Site-map */
+
+.site-map {
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-map__item {
+	width: 22.98%;
+}
+
+.site-map__title {
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 95px 0 40px;
+}
+
+.site-map__link {
+	color: #888888;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+
+.site-map__link + .site-map__link {
+	margin-top: 20px;
+}
+
+.site-map__app {
+	display: inline-block;
+	width: 48%;
+	background-color: #fff;
+}
+
+.site-map__app img {
+	float: left;
 }
