@@ -27,7 +27,6 @@ a {	text-decoration: none; color: black;}
 .top-header__content {
 	display: flex;
 	justify-content: space-between;
-	/* padding: 0 15px; */
 }
 
 .top-header__text {
@@ -53,6 +52,7 @@ a {	text-decoration: none; color: black;}
 	display: flex;
 	justify-content: space-between;
 	padding: 25px 15px;
+	align-items: center;
 }
 
 /* Navigation */
@@ -73,8 +73,17 @@ a {	text-decoration: none; color: black;}
 	color: #ff5353;
 }
 
-.navigation__item + .navigation__item {padding-left: 40px;}
+.navigation__item + .navigation__item {margin-left: 40px;}
 
+.header__icon {
+	font-size: 18px;
+	vertical-align: bottom;
+	transition: color .2s linear;
+}
+
+.header__icon:hover {
+	color: #ff5353;
+}
 
 .header__icon + .header__icon {margin-left: 30px;}
 
@@ -91,13 +100,6 @@ a {	text-decoration: none; color: black;}
 .banner__wrap {
 	float: right;
 }
-
-
-/* .banner::after {
-	content: " ";
-	display: table;
-	clear: both;
-} */
 
 .banner_grey {
 	background: url('../img/bg-2.png');
@@ -215,9 +217,6 @@ a {	text-decoration: none; color: black;}
 .product__popup {
 	opacity: 0;
 	position: absolute;
-	/* width: 180px;
-	left: 50%;
-	margin-left: -90px; */
 	width: 100%;
 	bottom: 10%;
 	transition: all .2s linear;
@@ -294,7 +293,6 @@ a {	text-decoration: none; color: black;}
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 150px;
-	/* align-items: center; */
 }
 
 .advantages__item {
@@ -377,10 +375,9 @@ a {	text-decoration: none; color: black;}
 
 }
 
-/* .journal__theme, .journal__comments {
-	margin-left: 10px;
+.journal__footer span {
+	margin-left: 5px;
 }
-*/
 .journal__theme {
 	margin-right: 30px;
 	margin-bottom: 10px;
@@ -467,14 +464,22 @@ a {	text-decoration: none; color: black;}
 	margin-bottom:40px;
 }
 
+.site-map__link-block {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 .site-map__link {
-	color: #888888;
-	font-size: 14px;
-	display: block;
+	
 	transition: color .2s linear;
 }
 
-.site-map__link:hover {
+.site-map__link a {
+	color: #888888;
+}
+
+.site-map__link a:hover {
 	color: #ff5353;
 }
 
@@ -658,7 +663,6 @@ a {	text-decoration: none; color: black;}
 
 	.banner__item {
 		width: 100%;
-		/* padding-top: 20px; */
 	}
 
 	.banner__item_first {
@@ -725,7 +729,6 @@ a {	text-decoration: none; color: black;}
 	.journal__item {
 		width: 100%;
 		padding: 0 20px;
-		/* text-align: center; */
 	}
 
 	.journal__item + .journal__item {
@@ -743,17 +746,9 @@ a {	text-decoration: none; color: black;}
 	}
 
 	.instagram__item {
-		width: auto;
+		width: 50%;
+		max-width: 262px;
 		border: 5px solid transparent;
-		/* padding: 10px; */
-	}
-
-	.instagram_picture {
-		/* padding: 10px; */
-	}
-
-	.instagram__item + .instagram__item {
-		/* padding-left: 5px; */
 	}
 
 	/* footer */
@@ -777,11 +772,90 @@ a {	text-decoration: none; color: black;}
 
 	.button-container {
 		justify-content: start;
-		/* margin-left: -15px; */
-		/* max-width: 300px; */
-	}
-
-	.button + .button {
-		/* margin-left: 15px; */
 	}
 }
+
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+	/* Header */
+	
+
+	.header__icon + .header__icon {
+		margin-left: 15px;
+	}
+
+	/* Banner */
+	.banner__title {
+		padding: 0 10px;
+		font-size: 35px;
+		margin-bottom: 20px;
+	}
+
+	.banner__subtitle {
+		margin-bottom: 30px;
+	}
+
+	/* Section */
+
+	.section__title {
+		font-size: 30px;
+		padding: 0 10px;
+	}
+
+	/* Product */
+
+	.product__name {
+		margin-top: 15px;
+		margin-bottom: 10px;	
+	}
+
+	.product__rate {
+		margin: 10px 0;
+	}
+
+	/* Advantages */
+
+	.advantages {
+		margin-bottom: 50px;
+	}
+
+	/* Site-map */
+
+	.site-map__title {
+		margin-bottom: 20px;
+	}
+
+	.site-map__item:last-child {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.site-map__item:nth-child(3) {
+		border-top: 1px solid #d6d8d9;
+		border-bottom: 1px solid #d6d8d9;
+		padding: 20px 0;
+	}
+
+	/* Button */
+	.button-container {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		border-bottom: 0;
+	}
+
+	/* Copyright */
+	.copyright {
+		margin-top: 25px;
+		padding-top: 20px;
+	}
+}
+
+@media (max-width: 320px) {
+	body {
+		width: 320px;
+	}
+}
+
+
